@@ -1,4 +1,5 @@
 ---
+output: true
 test: foobar
 ---
-123 {{page.test}}
+123
