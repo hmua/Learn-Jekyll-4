@@ -2,5 +2,5 @@
 output: true
 test_field: foobar
 ---
-{{test_field}}
+{{page.test_field}}
 123
