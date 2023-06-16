@@ -1,4 +1,4 @@
 ---
 test: foobar
 ---
-123 {{test}}
+123 {{page.test}}
