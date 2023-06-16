@@ -6,7 +6,7 @@ test_field: foobar
 {{site.site_field}}
 
 ---
-{{site.site_array}
+{{site.site_array}}
 
 ---
 {{site.tweets}}
