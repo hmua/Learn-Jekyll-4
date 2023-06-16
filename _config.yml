@@ -1,3 +1,6 @@
 site_field: '1245'
+site_array:
+  - site array 123
+  - 456
 include:
   - '_tweets.yml'
