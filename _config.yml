@@ -3,4 +3,4 @@ site_array:
   - site array 123
   - 456
 include:
-  - '_tweets.yml'
+  - _tweets
