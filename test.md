@@ -4,4 +4,7 @@ test_field: foobar
 ---
 {{page.test_field}}
 {{site.site_field}}
+
+---
+{{site.tweets}}
 123
