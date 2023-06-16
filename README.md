@@ -1,4 +1,4 @@
 ---
-test:foobar
+test: foobar
 ---
 # {{test}}
