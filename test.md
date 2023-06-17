@@ -18,6 +18,9 @@ test_field: foobar
 {{site.tweets}}
 
 ---
+{{site.tweets[0]}}
+
+---
 {{site.tweets[1]}}
 
 ---
