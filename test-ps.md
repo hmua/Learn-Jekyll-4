@@ -4,6 +4,11 @@
 ---
 {{a|replace:replace:'<','&lt;'-}}
 
+---
+{%for a in a%}
+- {{a}}{%endfor%}
+
+---
 
 {%for a in site.pages-%}
 {{a.path}}|
