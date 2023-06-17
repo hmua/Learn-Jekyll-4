@@ -2,7 +2,7 @@
 {{a|map:'、'}}
 
 ---
-{{a|replace:replace:'<','&lt;'-}}
+{{a|replace:replace:'<','&lt;'}}
 
 ---
 {%for a in a%}
