@@ -9,6 +9,12 @@ test_field: foobar
 {{site.site_array}}
 
 ---
+{{site.site_array[0]}}
+
+---
+{{site.site_array[1]}}
+
+---
 {{site.tweets}}
 
 ---
