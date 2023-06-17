@@ -5,8 +5,8 @@
 {{a|replace:replace:'<','&lt;'}}
 
 ---
-{%for a in a%}
-- {{a}}{%endfor%}
+{%for b in a%}
+- {{b}}{%endfor%}
 
 ---
 
