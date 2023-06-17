@@ -12,7 +12,13 @@ test_field: foobar
 {{site.tweets}}
 
 ---
-{{site.tweets[2023]}}
+{{site.tweets['2023']}}
+
+---
+{{site.tweets["2023"]}}
+
+---
+{{site.tweets.2023}}
 
 ---
 {{site.tweets[2023][6]}}
