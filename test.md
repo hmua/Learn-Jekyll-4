@@ -1,6 +1,21 @@
 ---
 output: true
 test_field: foobar
+tweets:
+  - 2022:
+    - 6
+      - 16
+        some content
+      - 17
+        some content 2
+        some content 333
+  - 2023:
+    - 6
+      - 16
+        some content
+      - 17
+        some content 2
+        some content 333
 ---
 {{page.test_field}}
 {{site.site_field}}
@@ -13,6 +28,22 @@ test_field: foobar
 
 ---
 {{site.site_array[1]}}
+
+---
+{%assign a=page.tweets%}
+{{a}}
+
+---
+{{a[0]}}
+
+---
+{{a[1]}}
+
+---
+{{a[0][0]}}
+
+---
+{{a[0][1]}}
 
 ---
 {{site.tweets}}
