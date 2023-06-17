@@ -8,6 +8,14 @@
 - {{b}}{%endfor%}
 
 ---
+{%for b in a%}
+- {{b[0]}}: {{b[1]}}{%endfor%}
+
+---
+{%for b in a%}
+- {{b.first}}: {{b.last}}{%endfor%}
+
+---
 {{a|replace:replace:'<','&lt;'}}
 
 ---
