@@ -1,5 +1,7 @@
 {%assign a=site.pages|where:'path','test.md'|first%}
+```kramdown
 {{a|join:'、'}}
+```
 
 ---
 {%for b in a%}
