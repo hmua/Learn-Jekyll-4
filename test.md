@@ -12,6 +12,9 @@ test_field: foobar
 {{site.tweets}}
 
 ---
+{{site.tweets[1]}}
+
+---
 {{site.tweets['2023']}}
 
 ---
