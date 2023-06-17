@@ -12,5 +12,13 @@ test_field: foobar
 {{site.tweets}}
 
 ---
+{{site.tweets[23]}}
+
+---
+{{site.tweets[23][6]}}
+
+---
 {{site.tweets[23][6][17]}}
+
+---
 123
