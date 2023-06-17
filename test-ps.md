@@ -1,3 +1,3 @@
 {%for a in site.pages%}
-{{a[0]}}|{{a[1]}}
+{{a[0]}}|{{a[1]}}|1
 {%endfor%}
