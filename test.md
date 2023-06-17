@@ -3,17 +3,19 @@ output: true
 test_field: foobar
 tweets:
   - 2022:
-    - 6
-      - 16
+    - 6:
+      - 16:
         some content
-      - 17
+      - 17:
         some content 2
         some content 333
   - 2023:
-    - 6
-      - 16
+    - 6:
+      - 16:
         some content
-      - 17
+        1616 16 16
+      - 17:
+        17171717
         some content 2
         some content 333
 ---
