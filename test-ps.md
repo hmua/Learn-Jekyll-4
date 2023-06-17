@@ -1,12 +1,12 @@
 {%assign a=site.pages|where:'path','test.md'|first%}
-{{a|map:'、'}}
-
----
-{{a|replace:replace:'<','&lt;'}}
+{{a|join:'、'}}
 
 ---
 {%for b in a%}
 - {{b}}{%endfor%}
+
+---
+{{a|replace:replace:'<','&lt;'}}
 
 ---
 
