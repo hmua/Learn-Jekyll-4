@@ -1,3 +1,10 @@
+{%assign a=site.pages|where:'path','test.md'|first%}
+{{a|map:'、'}}
+
+---
+{{a|replace:replace:'<','&lt;'-}}
+
+
 {%for a in site.pages-%}
 {{a.path}}|
 {%-unless a.path=='test-ps.md'or a.path=='assets/css/style.scss'-%}
