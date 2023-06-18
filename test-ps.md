@@ -26,11 +26,11 @@ for是一个handle一条，但join就是整个一条。
 
 ---
 {%for b in a%}
-- {{b[0]}}: {{b[1]}}{%endfor%}
+{{b[0]}}|{{b[1]}}{%endfor%}
 
 ---
 {%for b in a%}
-- {{b.first}}: {{b.last}}{%endfor%}
+{{b.first}}|{{b.last}}{%endfor%}
 
 ---
 {{a|replace:replace:'<','&lt;'}}
