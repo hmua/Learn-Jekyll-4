@@ -33,10 +33,10 @@ permalink: 探针
 `gh-pages` classic：*build error!*；新版：*defgde*
 
 ### Detecting `nil` values with `where` filter (≥4.0)
-{%assign a=site.pages|where:'my_prop',nil%}
+{%assign a=site.pages|where:'path',nil%}
 {{a.size}}
 
-`gh-pages` classic：*8*；新版：*0*
+`gh-pages` classic：*（非0）*；新版：*0*
 
 ### Find (≥4.1.0).
 >{%assign a=site.pages|find:'path',page.path%}
@@ -46,5 +46,5 @@ permalink: 探针
 新版：*{{page.path}}*×
 
 ### 行内注释 (Liquid ≥5.4)
-{% # 12345 %}
+{{'{'}}% # ... %}
 （不支持）
