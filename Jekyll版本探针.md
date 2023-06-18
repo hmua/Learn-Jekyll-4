@@ -20,9 +20,9 @@ permalink: 探针
 {{site.pages|map:'path'|join:','}}，预期*assets/css/style.scss,README.md*✓
 
 ### Where
-{%assign pages=site.pages|where:'path','assets/css/style.scss'%}
+{%assign pages=site.pages|where:'path',page.path%}
 {{pages.size}}，预期*1*✓
-{{pages.first.name}}，预期*style.scss*✓
+{{pages.first.path}}，预期*{{page.path}}*✓
 
 ### Where Expression (≥3.2.0)
 {{a|where_exp:'b','b=="abc"'}}，预期*abcabc*✓
@@ -35,15 +35,15 @@ permalink: 探针
 ### Detecting `nil` values with `where` filter (≥4.0)
 {%assign a=site.pages|where:'my_prop',nil%}
 {{a.size}}
+
 `gh-pages` classic：*8*；新版：*0*
 
-### Find (≥4.1.0)
-{%assign aCss='assets/main.scss'%}
-{%assign a=site.pages|find:'path',aCss%}
-{{a.name}}
+### Find (≥4.1.0).
+{%assign a=site.pages|find:'path',page.path%}
+{{a.path}}
 
 `gh-pages` classic：*无输出*，*`|find`忽略了*
-新版：*main.scss*×
+新版：*{{page.path}}*×
 
 ### 行内注释 (Liquid ≥5.4)
 `{{'{'}}% # ... ... %}`（不支持）
