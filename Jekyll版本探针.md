@@ -11,7 +11,7 @@ permalink: 探针
 {{a|join:','}}✓
 {{a.size}}7✓
 {{a.join:','}}×
-{{a.first.size}}4✓
+{{a.first.size}}3✓
 
 ### Map
 {{a|map:'upcase'}}
