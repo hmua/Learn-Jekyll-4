@@ -36,8 +36,10 @@ permalink: /探针
 ### Find (≥4.1.0)
 {%assign aCss='assets/main.scss'%}
 {%assign a=site.pages|find:'path',aCss%}
-{{a.name}}，预期*main.scss*×
-*`|find`从之后的内容都忽略了*
+{{a.name}}
+
+`gh-pages` classic：*无输出*，*`|find`忽略了*
+新版：*main.scss*×
 
 ### 行内注释 (Liquid ≥5.4)
 `{{'{'}}% # ... ... %}`（不支持）
