@@ -29,6 +29,7 @@ permalink: 探针
 
 ### Binary operators in `where_exp` filter (≥4.0)
 {{'{'}}{ a | where_exp:"b", "b=='a' or b=='bc'" }}
+
 `gh-pages` classic：*build error!*；新版：*abcabc*
 
 ### Detecting `nil` values with `where` filter (≥4.0)
