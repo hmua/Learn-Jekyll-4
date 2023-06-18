@@ -17,7 +17,7 @@ permalink: 探针
 {{a|map:'upcase'}}
 
 ---
-{{site.pages|map:'path'|join:','}}，预期*assets/css/style.scss,README.md*✓
+{{site.pages|map:'path'|join:'、'}}，预期*assets/css/style.scss,README.md*✓
 
 ### Where
 {%assign pages=site.pages|where:'path',page.path%}
