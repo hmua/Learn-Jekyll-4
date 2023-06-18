@@ -30,6 +30,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+theme: minima
 plugins:
   - jekyll-feed
 
@@ -54,26 +55,3 @@ plugins:
 #   - vendor/ruby/
 
 base_url: ""
-
-tweets:
-  2022:
-    - 6
-      - 16
-        some content
-      - 17
-        some content 2
-        some content 333
-  2023:
-    - 6
-      - 16
-        some content
-      - 17
-        some content 2
-        some content 333
-
-site_field: '1245'
-site_array:
-  - site array 123
-  - 456
-include:
-  - fake including file
