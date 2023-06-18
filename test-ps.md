@@ -7,7 +7,7 @@
 ```yaml
 {{a|join:'、'}}
 ```
-*`join`是无效的，搞不懂，
+×*`join`是无效的，搞不懂，
 for是一个handle一条，但join就是整个一条。
 
 ---
@@ -25,9 +25,6 @@ for是一个handle一条，但join就是整个一条。
 ---
 {%for a in a%}{%unless a[0]=='content'%}
 {{a.first}}|{{a.last}}{%endunless%}{%endfor%}
-
----
-{{a|replace:replace:'<','&lt;'}}
 
 ---
 
