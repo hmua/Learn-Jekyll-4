@@ -17,6 +17,11 @@ for是一个handle一条，但join就是整个一条。
 
 ---
 {%for a in a%}{%unless a[0]=='content'%}
+- {{a|join:'|'}}{%endunless%}{%endfor%}
+✓
+
+---
+{%for a in a%}{%unless a[0]=='content'%}
 {{a[0]}}|{{a[1]}}{%endunless%}{%endfor%}
 ✓
 
