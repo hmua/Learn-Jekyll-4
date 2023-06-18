@@ -1,11 +1,28 @@
 {%assign a=site.pages|where:'path','test.md'|first%}
-```kramdown
+```yaml
+{{a}}
+```
+
+---
+```yaml
 {{a|join:'、'}}
 ```
+*`join`是无效的，搞不懂，
+for是一个handle一条，但join就是整个一条。
+
+---
+{%for a in a%}
+- {{a}}{%endfor%}
+✓
 
 ---
 {%for b in a%}
 - {{b}}{%endfor%}
+✓
+
+---
+{%for b in a%}- {{b}}\n{%endfor%}
+✓
 
 ---
 {%for b in a%}
