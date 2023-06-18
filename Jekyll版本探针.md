@@ -39,11 +39,11 @@ permalink: 探针
 `gh-pages` classic：*8*；新版：*0*
 
 ### Find (≥4.1.0).
-{%assign a=site.pages|find:'path',page.path%}
+>{%assign a=site.pages|find:'path',page.path%}
 {{a.path}}
 
 `gh-pages` classic：*无输出*，*`|find`忽略了*
 新版：*{{page.path}}*×
 
 ### 行内注释 (Liquid ≥5.4)
-`{{'{'}}% # ... ... %}`（不支持）
+`{% # ... ... %}`（不支持）
