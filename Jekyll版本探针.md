@@ -28,7 +28,7 @@ permalink: 探针
 {{a|where_exp:'b','b=="abc"'}}，预期*abcabc*✓
 
 ### Binary operators in `where_exp` filter (≥4.0)
-{{'{'}}{ a | where_exp:"b", "b=='de' or b=='fg'" }}
+{{ a | where_exp:"b", "b=='de' or b=='fg'" }}
 
 `gh-pages` classic：*build error!*；新版：*defgde*
 
