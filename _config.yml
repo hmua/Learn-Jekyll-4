@@ -54,6 +54,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+base_url: ""
+
 tweets:
   2022:
     - 6
