@@ -6,12 +6,12 @@ permalink: 探针
 *根据[Liquid Filters | Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/liquid/filters/)制作*
 *根据[Dependency versions \| GitHub Pages](https://pages.github.com/versions/)，GitHub Pages默认使用Jekyll 3.9.3*
 
-{%assign a='a,bc,def,hijk,a,bc,def'|split:','%}
-{{a|size}}
-{{a|join:','}}
-{{a.size}}
+{%assign a='abc,de,fg,hijk,a,bc,def'|split:','%}
+{{a|size}}7✓
+{{a|join:','}}✓
+{{a.size}}7✓
 {{a.join:','}}×
-{{a.first.size}}
+{{a.first.size}}4✓
 
 ### Map
 {{a|map:'upcase'}}
