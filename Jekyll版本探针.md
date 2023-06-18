@@ -1,3 +1,6 @@
+---
+permalink: /探针
+---
 # Jekyll版本探针 测试
 *根据[Liquid Filters | Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/liquid/filters/)制作*
 *根据[Dependency versions \| GitHub Pages](https://pages.github.com/versions/)，GitHub Pages默认使用Jekyll 3.9.3*
@@ -24,7 +27,7 @@
 {{a|where_exp:'b','b=="a"'}}，预期*aa*✓
 
 ### Binary operators in `where_exp` filter (≥4.0)
-{{ a | where_exp:"b", "b=='a' or b=='bc'" }}，预期*abcabc*✓
+{{'{'}}{ a | where_exp:"b", "b=='a' or b=='bc'" }}，预期*abcabc*✓
 
 ### Detecting `nil` values with `where` filter (≥4.0)
 {%assign a=site.pages|where:'my_prop',nil%}
