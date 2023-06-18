@@ -21,7 +21,7 @@ permalink: 探针
 
 ### Where
 {%assign pages=site.pages|where:'path','assets/css/style.scss'%}
-{{pages.size}}，预期*1*
+{{pages.size}}，预期*1*✓
 {{pages.first.name}}，预期*style.scss*✓
 
 ### Where Expression (≥3.2.0)
