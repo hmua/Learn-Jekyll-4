@@ -12,7 +12,7 @@ for是一个handle一条，但join就是整个一条。
 
 ---
 {%for a in a%}
-- {%unless a=='content'-%}
+- {%unless a[0]=='content'-%}
 {{a}}
 {%-endunless%}
 {%-endfor%}
@@ -20,7 +20,7 @@ for是一个handle一条，但join就是整个一条。
 
 ---
 {%for b in a%}
-- {%unless a=='content'-%}
+- {%unless b[0]=='content'-%}
 {{b}}
 {%-endunless%}
 {%-endfor%}
