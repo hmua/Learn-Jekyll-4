@@ -12,8 +12,6 @@ permalink: /探针
 {{a.join:','}}×
 {{a.first.size}}
 
-{%assign aCss='assets/main.scss'%}
-
 ### Map
 {{a|map:'upcase'}}
 {{site.pages|map:'path'|join:','}}，预期*assets/css/style.scss,README.md*✓
@@ -27,13 +25,16 @@ permalink: /探针
 {{a|where_exp:'b','b=="a"'}}，预期*aa*✓
 
 ### Binary operators in `where_exp` filter (≥4.0)
-{{'{'}}{ a | where_exp:"b", "b=='a' or b=='bc'" }}，预期*abcabc*✓
+{{'{'}}{ a | where_exp:"b", "b=='a' or b=='bc'" }}
+`gh-pages` classic：*build error*；新版：*abcabc*✓
 
 ### Detecting `nil` values with `where` filter (≥4.0)
 {%assign a=site.pages|where:'my_prop',nil%}
-{{a.size}}，预期*5*✓
+{{a.size}}
+`gh-pages` classic：*8*；新版：*5*✓
 
 ### Find (≥4.1.0)
+{%assign aCss='assets/main.scss'%}
 {%assign a=site.pages|find:'path',aCss%}
 {{a.name}}，预期*main.scss*×
 *`|find`从之后的内容都忽略了*
