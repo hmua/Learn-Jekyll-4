@@ -1,5 +1,6 @@
 ---
-permalink: /探针
+permalink: 探针
+
 ---
 # Jekyll版本探针 测试
 *根据[Liquid Filters | Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/liquid/filters/)制作*
