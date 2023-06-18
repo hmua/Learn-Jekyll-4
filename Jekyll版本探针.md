@@ -6,7 +6,7 @@ permalink: 探针
 *根据[Liquid Filters | Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/liquid/filters/)制作*
 *根据[Dependency versions \| GitHub Pages](https://pages.github.com/versions/)，GitHub Pages默认使用Jekyll 3.9.3*
 
-{%assign a='abc,de,fg,hijk,a,bc,def'|split:','%}
+{%assign a='abc,de,fg,hijk,abc,de,fgh'|split:','%}
 {{a|size}}7✓
 {{a|join:','}}✓
 {{a.size}}7✓
@@ -25,12 +25,12 @@ permalink: 探针
 {{pages.first.name}}，预期*style.scss*✓
 
 ### Where Expression (≥3.2.0)
-{{a|where_exp:'b','b=="a"'}}，预期*aa*✓
+{{a|where_exp:'b','b=="abc"'}}，预期*abcabc*✓
 
 ### Binary operators in `where_exp` filter (≥4.0)
-{{'{'}}{ a | where_exp:"b", "b=='a' or b=='bc'" }}
+{{'{'}}{ a | where_exp:"b", "b=='de' or b=='fg'" }}
 
-`gh-pages` classic：*build error!*；新版：*abcabc*
+`gh-pages` classic：*build error!*；新版：*defgde*
 
 ### Detecting `nil` values with `where` filter (≥4.0)
 {%assign a=site.pages|where:'my_prop',nil%}
