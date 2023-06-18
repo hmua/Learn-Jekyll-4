@@ -26,6 +26,11 @@ for是一个handle一条，但join就是整个一条。
 ✓
 
 ---
+{%for a in a%}{%unless a[0]=='content'%}
+{{a|first}}|{{a|last}}{%endunless%}{%endfor%}
+✓
+
+---
 
 {%for a in site.pages-%}
 {{a.path}}|
