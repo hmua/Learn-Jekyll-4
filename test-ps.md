@@ -19,16 +19,12 @@ for是一个handle一条，但join就是整个一条。
 ✓
 
 ---
-{%for b in a%}
-- {%unless b[0]=='content'-%}
-{{b}}
-{%-endunless%}
-{%-endfor%}
-✓
 
----
-{%for b in a%}
-{{b[0]}}|{{b[1]}}{%endfor%}
+{%for a in a-%}
+{%unless a[0]=='content'-%}
+{{a[0]}}|{{a[1]}}
+{%-endunless%}
+{%endfor%}
 
 ---
 {%for b in a%}
