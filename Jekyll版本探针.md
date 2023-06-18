@@ -26,12 +26,12 @@ permalink: /探针
 
 ### Binary operators in `where_exp` filter (≥4.0)
 {{'{'}}{ a | where_exp:"b", "b=='a' or b=='bc'" }}
-`gh-pages` classic：*build error*；新版：*abcabc*✓
+`gh-pages` classic：*build error!*；新版：*abcabc*
 
 ### Detecting `nil` values with `where` filter (≥4.0)
 {%assign a=site.pages|where:'my_prop',nil%}
 {{a.size}}
-`gh-pages` classic：*8*；新版：*5*✓
+`gh-pages` classic：*8*；新版：*0*
 
 ### Find (≥4.1.0)
 {%assign aCss='assets/main.scss'%}
