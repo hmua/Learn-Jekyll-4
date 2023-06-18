@@ -21,3 +21,5 @@ site_array:
   - 456
 include:
   - fake including file
+
+theme: minima
