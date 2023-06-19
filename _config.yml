@@ -35,7 +35,11 @@ plugins:
   - jekyll-feed
 
 defaults:
-  layout: page
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: page
 
 # Exclude from processing.
 # The following items will not be processed, by default.
