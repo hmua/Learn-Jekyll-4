@@ -37,6 +37,11 @@ plugins:
 defaults:
   -
     scope:
+      path: "index.md" # an empty string here means all files in the project
+    values:
+      layout: home
+  -
+    scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: page
