@@ -23,3 +23,15 @@ site_array:
   - 456
 include:
   - test_include.yml
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: page
+  -
+    scope:
+      path: "index.md"
+    values:
+      layout: home
