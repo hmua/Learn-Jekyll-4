@@ -37,4 +37,4 @@ defaults:
     values:
       layout: home
 
-theme: minima
+remote-theme: Customized-Minima
