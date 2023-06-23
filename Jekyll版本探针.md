@@ -3,7 +3,7 @@ permalink: 探针
 
 ---
 # Jekyll版本探针 测试
-*根据[Liquid Filters | Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/liquid/filters/)制作*
+*根据[Liquid Filters | Jekyll Simple, blog-aware, static sites](https://jekyllrb.com/docs/liquid/filters/)制作*
 *根据[Dependency versions \| GitHub Pages](https://pages.github.com/versions/)，GitHub Pages默认使用Jekyll 3.9.3*
 
 {%assign a='abc,de,fg,hijk,abc,de,fgh'|split:','%}
