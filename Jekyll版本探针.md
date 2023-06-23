@@ -1,5 +1,6 @@
 ---
 permalink: 探针
+output: false
 
 ---
 # Jekyll版本探针 测试
