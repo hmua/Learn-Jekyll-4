@@ -21,4 +21,4 @@ jobs:
         provider: 'github'
         token: ${{ secrets.GITHUB_TOKEN }}
         jekyll_src: './'
-        jekyll_baseUrl: '/t'
+        jekyll_baseurl: '/t'
