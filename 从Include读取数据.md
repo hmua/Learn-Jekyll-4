@@ -1,6 +1,6 @@
 ---
 ---
-{%assign a=site.included_tweets%}
+{%assign a=site.tweets2%}
 {{a}}
 
 ---
