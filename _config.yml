@@ -1,4 +1,7 @@
 
+include:
+  - _test_include.yml
+
 tweets:
   - 2022:
     - 6:
@@ -22,8 +25,6 @@ site_field: '1245'
 site_array:
   - site array 123
   - 456
-include:
-  - _test_include.yml
 
 defaults:
   -
