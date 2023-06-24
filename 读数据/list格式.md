@@ -1,5 +1,5 @@
 ---
-output: true
+title: list格式
 test_field: foobar
 tweets:
   - 2022:
@@ -19,7 +19,6 @@ tweets:
         some content 2
         some content 333
 ---
-# list格式
 {{page.test_field}}
 
 ---
