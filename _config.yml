@@ -41,7 +41,7 @@ defaults:
 
 
 titles_from_headings:
-  #strip_title: true
+  strip_title: true
 
 remote_theme: hmua/Customized-Minima
 
