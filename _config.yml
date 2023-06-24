@@ -1,5 +1,6 @@
 
-include: '_test_include.yml'
+include:
+  - '_test_include.yml'
 
 tweets:
   - 2022:
