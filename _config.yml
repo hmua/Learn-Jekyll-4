@@ -39,6 +39,10 @@ defaults:
     values:
       layout: page
 
+
+titles_from_headings:
+  #strip_title: true
+
 remote_theme: hmua/Customized-Minima
 
 plugins:
