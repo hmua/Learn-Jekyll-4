@@ -23,7 +23,7 @@ site_array:
   - site array 123
   - 456
 include:
-  - test_include.yml
+  - _test_include.yml
 
 defaults:
   -
