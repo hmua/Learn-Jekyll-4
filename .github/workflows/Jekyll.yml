@@ -22,4 +22,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         jekyll_src: './'
         jekyll_baseurl: '/Try-Jekyll'
-        jekyll_cfg: '_config.yml,test_include.yml'
+        jekyll_cfg: "_config.yml,test_include.yml"
