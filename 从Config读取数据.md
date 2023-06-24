@@ -1,33 +1,31 @@
 ---
 ---
-{{site.tweets}}
+{%assign a=site.tweets%}
+{{a}}
 
 ---
-{{site.tweets[0]}}
+{{a[0]}}
 
 ---
-{{site.tweets[1]}}
+{{a[1]}}
 
 ---
-{{site.tweets[0][0]}}
+{{a[0][0]}}
 
 ---
-{{site.tweets[0][1]}}
+{{a[0][1]}}
 
 ---
-{{site.tweets['2023']}}
+{{a['2023']}}
 
 ---
-{{site.tweets["2023"]}}
+{{a["2023"]}}
 
 ---
-{{site.tweets.2023}}
+{{a.2023}}
 
 ---
-{{site.tweets[2023][6]}}
+{{a[2023][6]}}
 
 ---
-{{site.tweets[2023][6][17]}}
-
----
-123
+{{a[2023][6][17]}}
