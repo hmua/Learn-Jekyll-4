@@ -14,16 +14,13 @@ output: false
 {{a.join:','}}×
 {{a.first.size}}3✓
 
-### Map
-{{a|map:'upcase'}}
-
----
-{{site.pages|map:'path'|join:'、'}}，预期*assets/css/style.scss,README.md*✓
-
 ### Where
 {%assign pages=site.pages|where:'path',page.path%}
 {{pages.size}}，预期*1*✓
 {{pages.first.path}}，预期*{{page.path}}*✓
+
+### Map
+{{site.pages|where:'path',page.path|map:'path'|join:'、'}}，预期*{{page.path}}*✓
 
 ### Where Expression (≥3.2.0)
 {{a|where_exp:'b','b=="abc"'}}，预期*abcabc*✓
