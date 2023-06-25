@@ -13,12 +13,7 @@ permalink: 探针
 {{a.join:','}}×
 {{a.first.size}}3✓
 
-### Where
-{%assign pages=site.pages|where:'path',page.path%}
-{{pages.size}}，预期*1*✓
-{{pages.first.path}}，预期*{{page.path}}*✓
-
-### Map
+### Where、Map
 {{site.pages|where:'path',page.path|map:'path'|join:'、'}}，预期*{{page.path}}*✓
 
 ### Where Expression (≥3.2.0)
