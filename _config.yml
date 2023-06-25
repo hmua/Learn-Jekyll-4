@@ -34,6 +34,8 @@ defaults:
     values:
       layout: home
   -
+    scope:
+      path:
     values:
       layout: page
 
