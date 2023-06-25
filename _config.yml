@@ -47,3 +47,4 @@ remote_theme: hmua/Customized-Minima
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-optional-front-matter
