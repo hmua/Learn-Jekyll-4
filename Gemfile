@@ -7,6 +7,7 @@ gem "jekyll", "~> 4.3.2"
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-remote-theme'
+  gem "jekyll-readme-index"
   gem 'jekyll-titles-from-headings'
 end
 
