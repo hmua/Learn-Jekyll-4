@@ -39,9 +39,9 @@ defaults:
     values:
       layout: page
 
-
-titles_from_headings:
-  strip_title: true
+readme_index:
+  remove_originals: true
+  with_frontmatter: false
 
 remote_theme: hmua/Customized-Minima
 
