@@ -30,7 +30,7 @@ site_array:
 defaults:
   -
     scope:
-      path: index.md
+      path: README.md
     values:
       layout: home
   -
