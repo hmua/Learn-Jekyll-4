@@ -28,7 +28,7 @@ site_array:
   - 456
 
 collections:
-  test_collection:
+  测试集合2:
     type: post
     post: true
     output: true
