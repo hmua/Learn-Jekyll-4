@@ -35,15 +35,15 @@ collections:
 
 defaults:
   - scope:
+      path: _测试集合1
+    values:
+      output: true
+
+  - scope:
       path: ""
       type: "测试集合1"
     values:
       layout: "post"
-      
-  - scope:
-      path: _测试集合1
-    values:
-      output: true
   - scope:
       path: README.md
     values:
