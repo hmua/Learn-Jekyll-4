@@ -6,21 +6,21 @@ include:
 tweets:
   - 2022:
     - 6:
-      - 16
-        data from config
-        y22 m6 d16
-        some content
-      - 17
-        y22m6d17 y22m6d17
+      - 16:
+          data from config
+          y22 m6 d16
+          some content
+      - 17:
+          y22m6d17 y22m6d17
   - 2023:
     - 6:
-      - 16
-        some content
-        1616 16 16
-      - 17
-        17171717
-        some content 2
-        some content 333
+      - 16:
+          some content
+          1616 16 16
+      - 17:
+          17171717
+          some content 2
+          some content 333
 
 site_field: '1245'
 site_array:
@@ -31,19 +31,24 @@ collections:
   测试集合1:
     type: post
     post: true
+    output: true
 
 defaults:
   - scope:
+      path: ""
+      type: "测试集合1"
+    values:
+      layout: "post"
+      
+  - scope:
       path: _测试集合1
-  - values:
+    values:
       output: true
-  -
-    scope:
+  - scope:
       path: README.md
     values:
       layout: home
-  -
-    scope:
+  - scope:
       path:
     values:
       layout: page
