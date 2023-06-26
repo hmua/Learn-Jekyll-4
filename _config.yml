@@ -1,5 +1,5 @@
-title: 星座演进说
-description: 愿你一切都好
+title: “Jekyll 4”学习
+description: 谢谢你！
 include:
   - '_test_include.yml'
 
@@ -27,7 +27,15 @@ site_array:
   - site array 123
   - 456
 
+collections:
+  测试集合1:
+    type: post
+
 defaults:
+  - scope:
+      path: 测试集合1
+  - values:
+      output: true
   -
     scope:
       path: README.md
