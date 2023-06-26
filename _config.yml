@@ -28,6 +28,10 @@ site_array:
   - 456
 
 collections:
+  test_collection:
+    type: post
+    post: true
+    output: true
   测试集合1:
     type: post
     post: true
