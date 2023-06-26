@@ -21,5 +21,5 @@ jobs:
         provider: 'github'
         token: ${{ secrets.GITHUB_TOKEN }}
         jekyll_src: './'
-        jekyll_baseurl: '/Try-Jekyll'
+        jekyll_baseurl: /Learn-Jekyll-4
 #        jekyll_cfg: "_config.yml,test_include.yml"
