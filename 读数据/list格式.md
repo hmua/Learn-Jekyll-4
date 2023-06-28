@@ -1,5 +1,4 @@
 ---
-title: list格式
 test_field: foobar
 tweets:
   - 2022:
