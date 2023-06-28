@@ -43,6 +43,21 @@ collections:
     type: post
     post: true
     output: true
+  测试集合3:
+    name: '测试集合3'
+    type: post
+    post: true
+    output: true
+  测试集合4:
+    name: '测试集合4'
+    type: post
+    post: true
+    output: true
+  测试集合5:
+    name: 'c5'
+    type: post
+    post: true
+    output: true
 
 defaults:
   - scope:
