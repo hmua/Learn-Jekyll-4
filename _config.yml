@@ -58,8 +58,8 @@ defaults:
     values:
       layout: home
   - scope:
-      path:
-      type: md
+      path: ''
+      type: page
     values:
       layout: page
 
