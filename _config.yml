@@ -30,7 +30,7 @@ site_array:
 collections:
   test_collection:
     name: 测试集合1
-  test_collection 2:
+  test_collection_2:
     name: 测试集合2
     type: post
     post: true
