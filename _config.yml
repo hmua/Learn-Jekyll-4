@@ -67,10 +67,5 @@ readme_index:
   with_frontmatter: false
 optional_front_matter:
   remove_originals: true
-#省略fm的页面和不省略的会有区别，引用到的其他页面的content，
-#没有front matter的，引用到的是Liquid build后的Markdown，
-#有front matter的，引用到的则有一些页是未build的“Liquid原文”，一些页是build后的，
-#以本页为分界，从本页引用本页开始，本页和之后全是未build的，
-所以似乎和这个plugin无关。
 
 remote_theme: hmua/Customized-Minima
