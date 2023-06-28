@@ -28,51 +28,12 @@ site_array:
   - 456
 
 collections:
-  测试集合2:
-    name: 'test col 2'
-    type: post
-    post: true
-    output: true
   test_collection:
-    name: test_collection
-    type: post
-    post: true
-    output: true
-  测试集合1:
-    name: '测试集合1'
-    type: post
-    post: true
-    output: true
-  测试集合3:
-    name: '测试集合3'
-    type: post
-    post: true
-    output: true
-  "测试集合4":
-    name: '测试集合4'
-    type: post
-    post: true
-    output: true
-  '测试集合5':
-    name: 'c5'
-    type: post
-    post: true
-    output: true
-  c6:
-    name: '测试集合6'
-    type: post
-    post: true
-    output: true
-  test collection 7:
-    name: '测试集合7'
-    type: post
-    post: true
-    output: true
-  'test collection 8':
-    name: '测试集合8'
-    type: post
-    post: true
-    output: true
+    name: 测试集合1
+  test_collection 2:
+    name: 测试集合2
+  'test_collection 3':
+    name: 测试集合3
 
 defaults:
   - scope:
