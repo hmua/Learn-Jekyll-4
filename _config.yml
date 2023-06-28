@@ -32,6 +32,9 @@ collections:
     name: 测试集合1
   test_collection 2:
     name: 测试集合2
+    type: post
+    post: true
+    output: true
   'test_collection 3':
     name: 测试集合3
 
