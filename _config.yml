@@ -58,8 +58,8 @@ defaults:
     values:
       layout: home
   - scope:
-      path: '*.md'
-      type: pages
+      path: ''
+      type: html_pages
     values:
       layout: page
 
