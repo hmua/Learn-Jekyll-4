@@ -53,7 +53,7 @@ collections:
     type: post
     post: true
     output: true
-  测试集合5:
+  '测试集合5':
     name: 'c5'
     type: post
     post: true
