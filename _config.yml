@@ -59,7 +59,7 @@ defaults:
       layout: home
   - scope:
       path: ''
-      type: page
+      type: pages
     values:
       layout: page
 
