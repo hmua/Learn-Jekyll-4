@@ -58,7 +58,7 @@ defaults:
     values:
       layout: home
   - scope:
-      path: ''
+      path: '**.md'
       type: pages
     values:
       layout: page
