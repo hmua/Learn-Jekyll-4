@@ -59,6 +59,7 @@ defaults:
       layout: home
   - scope:
       path:
+      type: markdown
     values:
       layout: page
 
