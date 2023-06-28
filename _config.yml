@@ -58,8 +58,7 @@ defaults:
     values:
       layout: home
   - scope:
-      path: ''
-      type: html_pages
+      path:
     values:
       layout: page
 
