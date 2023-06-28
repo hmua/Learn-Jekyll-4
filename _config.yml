@@ -63,6 +63,16 @@ collections:
     type: post
     post: true
     output: true
+  test collection 7:
+    name: '测试集合7'
+    type: post
+    post: true
+    output: true
+  'test collection 8':
+    name: '测试集合8'
+    type: post
+    post: true
+    output: true
 
 defaults:
   - scope:
