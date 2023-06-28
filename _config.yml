@@ -29,7 +29,7 @@ site_array:
 
 collections:
   测试集合2:
-    name: 测试集合2
+    name: '测试集合2'
     type: post
     post: true
     output: true
@@ -39,7 +39,7 @@ collections:
     post: true
     output: true
   测试集合1:
-    name: 测试集合1
+    name: '测试集合1'
     type: post
     post: true
     output: true
