@@ -48,13 +48,18 @@ collections:
     type: post
     post: true
     output: true
-  测试集合4:
+  "测试集合4":
     name: '测试集合4'
     type: post
     post: true
     output: true
   '测试集合5':
     name: 'c5'
+    type: post
+    post: true
+    output: true
+  c6:
+    name: '测试集合6'
     type: post
     post: true
     output: true
