@@ -66,8 +66,8 @@ tweets:
 ---
 
 {%for i in page.tweets-%}
-{%assign i=i.first-%}
-1|{{i|first}}|2|{{i|last}}
+{%assign j=i.first-%}
+1|{{j|first}}|2|{{j|last}}
 {%endfor%}
 
 居然是和第一轮一样`i[0]`和`i[1]`都无输出，`i|first`有输出
