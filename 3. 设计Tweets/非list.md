@@ -104,3 +104,19 @@ tweets:
 {%for i in tweets-%}
 1. {{i.first.first.first}}
 {%endfor%}
+
+
+×叠三个以上`|first`则都无输出
+
+---
+
+{%for i in tweets-%}
+1|{{i|first|first}}|2|{{i|first|last}}
+{%endfor%}
+
+---
+
+{tweets|group_by:'first'}}
+
+#### 小结
+map不到日期部分，也就不知道怎样`group_by`、排序，看来都无法做
