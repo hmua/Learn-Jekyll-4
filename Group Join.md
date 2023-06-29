@@ -39,7 +39,7 @@ tweets:
 - {{ post.slug }} *post*
 {% else %}{%for t in post.t reversed%}
 - {{t}} *twi*
-{% endfor%}{% endif %}{% endfor%}{% endfor%}
+{% endfor%}{% endif %}{% endfor%}{% endfor%}123
 
 ---
 ```json
