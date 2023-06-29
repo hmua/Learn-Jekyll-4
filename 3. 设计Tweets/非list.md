@@ -96,3 +96,11 @@ tweets:
 {%for i in tweets-%}
 1. {{i|first|first|first}}
 {%endfor%}
+^
+{%for a in tweets-%}
+1. {{i|first|first|first|first|first}}
+{%endfor%}
+^
+{%for i in tweets-%}
+1. {{i.first.first.first}}
+{%endfor%}
