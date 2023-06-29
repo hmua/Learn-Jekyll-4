@@ -29,7 +29,9 @@ tweets:
 {{page.tweets|group_by:'date'}}✓
 
 ---
+```json
 {{site.posts|concat:page.tweets|group_by:'date'}}
+```
 
 ---
 {%assign tweets=page.tweets%}
