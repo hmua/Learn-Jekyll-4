@@ -92,3 +92,7 @@ tweets:
 {%endfor%}
 
 ✓输出日期部分
+
+{%for i in tweets-%}
+1. {{i|first|first|first}}
+{%endfor%}
