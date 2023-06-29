@@ -21,4 +21,6 @@ tweets:
 ---
 {{site.posts|group_by:'date'}}
 {{page.tweets}}
+
+---
 {{page.tweets|map:'first'}}
