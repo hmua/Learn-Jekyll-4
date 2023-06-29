@@ -29,14 +29,16 @@ tweets:
 ✓`for`迭代可以
 
 ---
+
 {%for a in page.tweets-%}
-{{a[0]}}|{{a[1]}}
+1|{{a[0]}}|2|{{a[1]}}
 {%endfor%}
 `i[0]`和`i[1]`都无输出
 
 ---
+
 {%for a in page.tweets-%}
-{{a|first}}|{{a|last}}
+1|{{a|first}}|2|{{a|last}}
 {%endfor%}
 `i|first`有输出
 
@@ -50,6 +52,6 @@ tweets:
 {{a|join:', '}}×
 
 {%for i in a-%}
-{{i}}|{{i|first}}|{{i|last}}
+1|{{i}}|2|{{i|first}}|3|{{i|last}}
 {%endfor%}
 ×map后可以join也可以for，有条目但没有值，找不到数据在哪
