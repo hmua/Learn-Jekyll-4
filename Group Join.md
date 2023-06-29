@@ -59,8 +59,8 @@ tweets:
 ---
 
 {%for i in page.tweets-%}
-{%assign i=i.first-%}
-1|{{i[0]}}|2|{{i[1]}}
+{%assign j=i.first-%}
+1|{{j[0]}}|2|{{j[1]}}
 {%endfor%}
 
 ---
