@@ -23,9 +23,6 @@ tweets:
 {{page.tweets}}✓
 
 ---
-{{page.tweets|map:'first'}}×无输出
-
----
 {%for a in page.tweets-%}
 1. {{a}}
 {%endfor%}
@@ -42,6 +39,9 @@ tweets:
 {{a|first}}|{{a|last}}
 {%endfor%}
 `i|first`有输出
+
+{{page.tweets|map:'first'}}
+×但不支持`map:'first'`
 
 ---
 {%assign a=page.tweets|map:'first'-%}
