@@ -37,8 +37,8 @@ tweets:
 
 ---
 
-{%for a in page.tweets-%}
-1|{{a|first}}|2|{{a|last}}
+{%for i in page.tweets-%}
+1|{{i|first}}|2|{{i|last}}
 {%endfor%}
 `i|first`有输出
 
@@ -55,3 +55,17 @@ tweets:
 1|{{i}}|2|{{i|first}}|3|{{i|last}}
 {%endfor%}
 ×map后可以join也可以for，有条目但没有值，找不到数据在哪
+
+---
+
+{%for i in page.tweets-%}
+{%assign i=i.first%}
+1|{{i[0]}}|2|{{i[1]}}
+{%endfor%}
+
+---
+
+{%for i in page.tweets-%}
+{%assign i=i.first%}
+1|{{i|first}}|2|{{i|last}}
+{%endfor%}
