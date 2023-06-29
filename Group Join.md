@@ -41,7 +41,8 @@ tweets:
   {% else %}
     - {{post.t}} *twi*
   {% endif %}
-{% endfor-%}
+{% endfor%}
+{% endfor%}
 
 ---
 ```json
