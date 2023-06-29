@@ -29,11 +29,11 @@ tweets:
 {{page.tweets|group_by:'date'}}✓
 
 ---
-{{site.posts|concat:page.tweets|map:'date'|join:', '}}
+{{site.posts|concat:page.tweets|group_by:'date'|map:'name'|sort|join:', '}}
 
 ---
 ```json
-{{site.posts|concat:page.tweets|group_by:'date'}}
+{{site.posts|concat:page.tweets|group_by:'date'|sort}}
 ```
 
 ---
