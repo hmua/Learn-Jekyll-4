@@ -47,7 +47,6 @@ tweets:
 {%assign a=page.tweets|map:'first'-%}
 {{a}}×
 
----
 {{a|join:', '}}×
 
 {%for i in a-%}
