@@ -74,3 +74,21 @@ tweets:
 
 居然是和第一轮一样`i[0]`和`i[1]`都无输出，`i|first`有输出
 `i|first`是不是能一直叠下去？试一下——
+
+{%for i in tweets-%}
+1. {{i|first}}
+{%endfor%}
+
+✓有输出
+
+{%for i in tweets-%}
+1. {{i|first|first}}
+{%endfor%}
+
+✓输出日期部分
+
+{%for i in tweets-%}
+1. {{i.first|first}}
+{%endfor%}
+
+✓输出日期部分
