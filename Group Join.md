@@ -30,7 +30,7 @@ tweets:
 
 ---
 ```json
-{{site.posts|concat:page.tweets|sort:'date'}}
+{{site.posts|concat:page.tweets|sort:'date'|map:'date'}}
 ```
 
 ---
