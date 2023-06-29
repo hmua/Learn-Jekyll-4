@@ -94,9 +94,7 @@ tweets:
 {%for i in page.tweets-%}
 1. {{i|first|first|first}}
 {%endfor%}
-
-×以下都无输出
-
+^
 {%for a in page.tweets-%}
 1. {{i|first|first|first|first|first}}
 {%endfor%}
@@ -104,4 +102,5 @@ tweets:
 {%for i in page.tweets-%}
 1. {{i.first.first.first}}
 {%endfor%}
-^
+
+×叠三个以上`|first`则都无输出
