@@ -82,6 +82,10 @@ tweets:
 {%endfor%}
 ^
 {%for i in page.tweets-%}
+1. {{i.first|first}}
+{%endfor%}
+^
+{%for i in page.tweets-%}
 1. {{i|first|first|first}}
 {%endfor%}
 ^
