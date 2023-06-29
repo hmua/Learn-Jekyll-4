@@ -73,10 +73,14 @@ tweets:
 居然是和第一轮一样`i[0]`和`i[1]`都无输出，`i|first`有输出
 `i|first`是不是能一直叠下去？试一下——
 
-{%for a in page.tweets-%}
-1. {{a.first.first.first}}
+{%for i in page.tweets-%}
+1. {{i.first.first.first}}
 {%endfor%}
-
+^
+{%for i in page.tweets-%}
+1. {{i|first|first|first}}
+{%endfor%}
+^
 {%for a in page.tweets-%}
-1. {{a.first.first.first.first.first}}
+1. {{i|first|first|first|first|first}}
 {%endfor%}
