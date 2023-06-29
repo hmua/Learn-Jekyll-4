@@ -23,30 +23,31 @@ tweets:
 {{page.tweets}}✓
 
 ---
-{%for a in page.tweets-%}
+{%assign tweets=page.tweets%}
+{%for a in tweets-%}
 1. {{a}}
 {%endfor%}
 ✓`for`迭代可以
 
 ---
 
-{%for a in page.tweets-%}
+{%for a in tweets-%}
 1|{{a[0]}}|2|{{a[1]}}
 {%endfor%}
 `i[0]`和`i[1]`都无输出
 
 ---
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 1|{{i|first}}|2|{{i|last}}
 {%endfor%}
 `i|first`有输出
 
-{{page.tweets|map:'first'}}
+{{tweets|map:'first'}}
 ×但不支持`map:'first'`
 
 ---
-{%assign a=page.tweets|map:'first'-%}
+{%assign a=tweets|map:'first'-%}
 {{a}}×
 
 {{a|join:', '}}×
@@ -58,14 +59,14 @@ tweets:
 
 ---
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 {%assign j=i.first-%}
 1|{{j[0]}}|2|{{j[1]}}
 {%endfor%}
 
 ---
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 {%assign j=i.first-%}
 1|{{j|first}}|2|{{j|last}}
 {%endfor%}
@@ -73,33 +74,33 @@ tweets:
 居然是和第一轮一样`i[0]`和`i[1]`都无输出，`i|first`有输出
 `i|first`是不是能一直叠下去？试一下——
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 1. {{i|first}}
 {%endfor%}
 
 ✓有输出
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 1. {{i|first|first}}
 {%endfor%}
 
 ✓输出日期部分
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 1. {{i.first|first}}
 {%endfor%}
 
 ✓输出日期部分
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 1. {{i|first|first|first}}
 {%endfor%}
 ^
-{%for a in page.tweets-%}
+{%for a in tweets-%}
 1. {{i|first|first|first|first|first}}
 {%endfor%}
 ^
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 1. {{i.first.first.first}}
 {%endfor%}
 
@@ -107,13 +108,13 @@ tweets:
 
 ---
 
-{%for i in page.tweets-%}
+{%for i in tweets-%}
 1|{{i|first|first}}|2|{{i|first|last}}
 {%endfor%}
 
 ---
 
-{{page.tweets|group_by:'first'}}
+{{tweets|group_by:'first'}}
 
 #### 小结
 map不到日期部分，也就不知道怎样`group_by`、排序，看来都无法做
