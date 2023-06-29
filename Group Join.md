@@ -24,3 +24,13 @@ tweets:
 
 ---
 {{page.tweets|map:'first'}}
+
+---
+{%for a in page.tweets%}
+{{a[0]}}|{{a[1]}}
+{%endfor%}
+
+---
+{%for a in page.tweets%}
+{{a|first}}|{{a|last}}
+{%endfor%}
