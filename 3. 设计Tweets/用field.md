@@ -49,8 +49,9 @@ tweets:
 {{tweets|map:'first'}}
 ×但不支持`map:'first'`
 
-{{tweets|map:'date'}}
-`map:'date'`
+---
+{{tweets|map:'date'|join:', '}}
+`map:'date'|join:', '`
 
 ---
 {%assign a=tweets|map:'first'-%}
