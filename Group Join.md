@@ -29,6 +29,9 @@ tweets:
 {{page.tweets|group_by:'date'}}✓
 
 ---
+{{site.posts|concat:page.tweets|group_by:'date'}}
+
+---
 {%assign tweets=page.tweets%}
 {%for a in tweets-%}
 1. {{a}}
