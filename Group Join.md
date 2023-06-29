@@ -110,3 +110,7 @@ tweets:
 {%for i in page.tweets-%}
 1|{{i|first|first}}|2|{{i|first|last}}
 {%endfor%}
+
+---
+
+{{page.tweets|group_by:'first'}}
