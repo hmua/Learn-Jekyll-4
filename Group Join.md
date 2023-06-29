@@ -51,4 +51,3 @@ tweets:
 {%for i in a-%}
 {{i}}|{{i|first}}|{{i|last}}
 {%endfor%}
-、
