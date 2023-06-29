@@ -49,6 +49,9 @@ tweets:
 {{tweets|map:'first'}}
 ×但不支持`map:'first'`
 
+{{tweets|map:'date'}}
+`map:'date'`
+
 ---
 {%assign a=tweets|map:'first'-%}
 {{a}}×
