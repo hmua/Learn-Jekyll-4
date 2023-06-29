@@ -36,11 +36,11 @@ tweets:
 {%for day in by_day reversed%}
 ###### {{day.name|date:'%Y-%m-%d'}}
 {% for post in day.items-%}
-  {% if post.collection == 'posts'%}
-    - {{ post.slug }} *post*
-  {% else %}
-    - {{post.t}} *twi*
-  {% endif %}
+{% if post.collection == 'posts'%}
+- {{ post.slug }} *post*
+{% else %}
+- {{post.t}} *twi*
+{% endif %}
 {% endfor%}
 {% endfor%}
 
