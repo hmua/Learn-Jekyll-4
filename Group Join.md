@@ -48,10 +48,9 @@ tweets:
 {{a}}×
 
 ---
-{{a|join:', '}}
+{{a|join:', '}}×
 
----
 {%for i in a-%}
 {{i}}|{{i|first}}|{{i|last}}
 {%endfor%}
-×map后可以for，但完全找输出，不到数据在哪
+×map后可以join也可以for，有条目但没有值，找不到数据在哪
