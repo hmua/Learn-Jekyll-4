@@ -19,7 +19,6 @@ tweets:
       新开发的庞大空旷的公共空间
       让固守私人领域失去价值 甚至成为累赘
 ---
-{{site.posts|group_by:'date'}}✓
 {{page.tweets}}✓
 
 ---
