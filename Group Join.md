@@ -35,14 +35,11 @@ tweets:
 {%assign by_day=site.posts|concat:page.tweets|group_by:'date'|sort:'name'%}
 {%for day in by_day reversed%}
 ###### {{day.name|date:'%Y-%m-%d'}}
-{% for post in day.items-%}
-{% if post.collection == 'posts'%}
+{% for post in day.items%}{% if post.collection == 'posts'%}
 - {{ post.slug }} *post*
-{% else %}
-- {{post.t}} *twi*
-{% endif %}
-{% endfor%}
-{% endfor%}
+{% else %}{%for t in post.t reversed%}
+- {{t}} *twi*
+{% endfor%}{% endif %}{% endfor%}{% endfor%}
 
 ---
 ```json
