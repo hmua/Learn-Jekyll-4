@@ -34,3 +34,8 @@ tweets:
 {%for a in page.tweets%}
 {{a|first}}|{{a|last}}
 {%endfor%}
+
+---
+{%for a in page.tweets%}
+1. {{a}}
+{%endfor%}
