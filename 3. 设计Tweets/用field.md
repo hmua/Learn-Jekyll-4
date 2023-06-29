@@ -54,6 +54,10 @@ tweets:
 `map:'date'|join:', '`
 
 ---
+{{tweets|sort:'date'}}
+`sort:'date'`
+
+---
 {%assign a=tweets|map:'first'-%}
 {{a}}×
 
@@ -120,8 +124,6 @@ tweets:
 {%endfor%}
 
 ---
-
-{{tweets|group_by:'first'}}
 
 #### 小结
 map不到日期部分，也就不知道怎样`group_by`、排序，看来都无法做
