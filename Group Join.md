@@ -74,7 +74,11 @@ tweets:
 `i|first`是不是能一直叠下去？试一下——
 
 {%for i in page.tweets-%}
-1. {{i.first.first.first}}
+1. {{i|first}}
+{%endfor%}
+^
+{%for i in page.tweets-%}
+1. {{i|first|first}}
 {%endfor%}
 ^
 {%for i in page.tweets-%}
@@ -84,3 +88,8 @@ tweets:
 {%for a in page.tweets-%}
 1. {{i|first|first|first|first|first}}
 {%endfor%}
+^
+{%for i in page.tweets-%}
+1. {{i.first.first.first}}
+{%endfor%}
+^
