@@ -54,3 +54,4 @@ tweets:
 {%for i in a-%}
 {{i}}|{{i|first}}|{{i|last}}
 {%endfor%}
+×map后可以for，但完全找输出，不到数据在哪
