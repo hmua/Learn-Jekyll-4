@@ -29,7 +29,7 @@ tweets:
 {{page.tweets|group_by:'date'}}✓
 
 ---
-{{site.posts|concat:page.tweets|map:'date'|sort|join:', '}}
+{{site.posts|concat:page.tweets|map:'date'|sort:'date'|join:', '}}
 
 ---
 ```json
