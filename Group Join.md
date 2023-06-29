@@ -76,19 +76,27 @@ tweets:
 {%for i in page.tweets-%}
 1. {{i|first}}
 {%endfor%}
-^
+
+✓有输出
+
 {%for i in page.tweets-%}
 1. {{i|first|first}}
 {%endfor%}
-^
+
+✓输出日期部分
+
 {%for i in page.tweets-%}
 1. {{i.first|first}}
 {%endfor%}
-^
+
+✓输出日期部分
+
 {%for i in page.tweets-%}
 1. {{i|first|first|first}}
 {%endfor%}
-^
+
+×以下都无输出
+
 {%for a in page.tweets-%}
 1. {{i|first|first|first|first|first}}
 {%endfor%}
