@@ -35,7 +35,16 @@ tweets:
 {%for a in page.tweets-%}
 {{a|first}}|{{a|last}}
 {%endfor%}
-×`tweet|first`有输出
+`tweet|first`有输出
+
+---
+{%assign a=page.tweets|map:'first'-%}
+{{a}}
+
+---
+{%for a in a-%}
+{{a|first}}|{{a|last}}
+{%endfor%}
 
 ---
 {%for a in page.tweets-%}
