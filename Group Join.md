@@ -27,15 +27,21 @@ tweets:
 
 ---
 {%for a in page.tweets-%}
+1. {{a}}
+{%endfor%}
+✓`for`迭代可以
+
+---
+{%for a in page.tweets-%}
 {{a[0]}}|{{a[1]}}
 {%endfor%}
-×`tweet[0]`和`tweet[1]`都无输出
+`i[0]`和`i[1]`都无输出
 
 ---
 {%for a in page.tweets-%}
 {{a|first}}|{{a|last}}
 {%endfor%}
-`tweet|first`有输出
+`i|first`有输出
 
 ---
 {%assign a=page.tweets|map:'first'-%}
@@ -45,8 +51,4 @@ tweets:
 {%for a in a-%}
 {{a|first}}|{{a|last}}
 {%endfor%}
-
----
-{%for a in page.tweets-%}
-1. {{a}}
-{%endfor%}
+、
