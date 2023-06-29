@@ -29,11 +29,11 @@ tweets:
 {{page.tweets|group_by:'date'}}✓
 
 ---
-{{site.posts|concat:page.tweets|group_by:'date'|map:'name'|map:'date:%Y-%m-%d'|sort|join:', '}}
+{{site.posts|concat:page.tweets|group_by:'date'|map:'name'|sort|join:', '}}
 
 ---
 ```json
-{{site.posts|concat:page.tweets|group_by:'date'}}
+{{site.posts|concat:page.tweets|group_by:'date'|sort:'name'}}
 ```
 
 ---
@@ -65,7 +65,7 @@ tweets:
 `map:'date'|join:', '`
 
 ---
-{{tweets|sort:'date'}}
+{{tweets|sort:'dafote'}}
 `sort:'date'`
 
 ---
