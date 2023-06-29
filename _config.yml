@@ -74,5 +74,3 @@ remote_theme: hmua/Customized-Minima
 
 liquid:
   error_mode: warn
-  strict_variables: true
-  strict_filters: true
