@@ -19,23 +19,23 @@ tweets:
       新开发的庞大空旷的公共空间
       让固守私人领域失去价值 甚至成为累赘
 ---
-{{site.posts|group_by:'date'}}
-{{page.tweets}}
+{{site.posts|group_by:'date'}}✓
+{{page.tweets}}✓
 
 ---
-{{page.tweets|map:'first'}}
+{{page.tweets|map:'first'}}×无输出
 
 ---
-{%for a in page.tweets%}
+{%for a in page.tweets-%}
 {{a[0]}}|{{a[1]}}
 {%endfor%}
 
 ---
-{%for a in page.tweets%}
+{%for a in page.tweets-%}
 {{a|first}}|{{a|last}}
 {%endfor%}
 
 ---
-{%for a in page.tweets%}
+{%for a in page.tweets-%}
 1. {{a}}
 {%endfor%}
