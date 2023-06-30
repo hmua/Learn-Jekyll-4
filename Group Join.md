@@ -18,7 +18,7 @@ tweets:
   - date: 2023-06-28 00:00:00 +0000
     t:
     - 基本像个集合，基本前面的变动是集合中每个成员的定义
-    - "🌙这些表象 都见过 都熟悉\n实际 表象之后在发生着什么？"
+    - '🌙这些表象 都见过 都熟悉\n实际 表象之后在发生着什么？'
   - date: 2023-06-27 00:00:00 +0000
     t:
     - |-
@@ -39,7 +39,7 @@ tweets:
 {%for day in by_day reversed%}
 ###### {{day.name|date:'%Y-%m-%d'}}
 {% for post in day.items%}{% if post.collection == 'posts'%}
-- {{ post.slug }} *post*
+- {{ post.slug }} *po*
 {% else %}{%for t in post.t reversed%}
-- {{t}} *twi*
+- {{t}} *tw*
 {% endfor%}{% endif %}{% endfor%}{% endfor%}
