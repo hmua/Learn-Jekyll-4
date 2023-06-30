@@ -64,8 +64,6 @@ defaults:
     values:
       layout: post
 
-show_excerpts: true
-
 readme_index:
   remove_originals: true
   with_frontmatter: false
