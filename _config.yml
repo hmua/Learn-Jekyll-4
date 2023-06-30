@@ -35,8 +35,10 @@ collections:
     type: post
     post: true
     output: true
-  'test_collection 3':
-    name: 测试集合3
+  label must not contain space:
+    name: 这是个错误演示，集合信息不会读取
+  也不能用中文标签:
+    name: 这是个错误演示，集合信息不会读取
 
 defaults:
   - scope:
