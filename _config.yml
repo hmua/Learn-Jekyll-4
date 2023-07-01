@@ -36,7 +36,7 @@ collections:
   label must not contain space:
     name: 这是个错误演示，集合信息不会读取
   也不能用中文标签:
-    name: 这是个错误演示，集合信息不会读取
+    name: 这是另一个错误演示，集合信息不会读取
 
 defaults:
   - scope:
