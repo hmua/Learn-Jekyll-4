@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--fix Jekyll bug: title case error--><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>“Jekyll 4”学习 | 谢谢你！</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="“Jekyll 4”学习" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="谢谢你！" />
+<meta property="og:description" content="谢谢你！" />
+<meta property="og:site_name" content="“Jekyll 4”学习" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="“Jekyll 4”学习" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"谢谢你！","headline":"“Jekyll 4”学习","url":"/Learn-Jekyll-4/%E9%9B%86.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Learn-Jekyll-4/assets/css/style.css">
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Learn-Jekyll-4/">“Jekyll 4”学习</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Learn-Jekyll-4/Group%20Join.html">Group Join</a><a class="page-link" href="/Learn-Jekyll-4/%E6%8E%A2%E9%92%88">Jekyll版本探针</a><a class="page-link" href="/Learn-Jekyll-4/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/list%E6%A0%BC%E5%BC%8F.html">list格式</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html">list格式</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EConfig.html">从Config</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EInclude.html">从Include</a><a class="page-link" href="/Learn-Jekyll-4/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/%E7%94%A8field.html">用field</a><a class="page-link" href="/Learn-Jekyll-4/%E8%BF%AD%E4%BB%A3.html">迭代</a><a class="page-link" href="/Learn-Jekyll-4/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/%E9%9D%9Elist.html">非list</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E9%9D%9Elist.html">非list</a><a class="page-link" href="/Learn-Jekyll-4/assets/css/style.css">style</a><a class="page-link" href="/Learn-Jekyll-4/assets/minima-social-icons.svg">minima-social-icons</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EData.html">从Data</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E8%B7%A8%E9%A1%B5.html">跨页</a><a class="page-link" href="/Learn-Jekyll-4/%E8%B4%B4.html">贴</a><a class="page-link" href="/Learn-Jekyll-4/%E9%9B%86.html">集</a><a class="page-link" href="/Learn-Jekyll-4/%E9%A1%B5%E9%9B%86.html">页集</a><a class="page-link" href="/Learn-Jekyll-4/">README</a><a class="page-link" href="/Learn-Jekyll-4/assets/css/style.css.map">style</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <p>在<code class="language-plaintext highlighter-rouge">_config.yml</code>中添加集合，就能通过<code class="language-plaintext highlighter-rouge">site.collections</code>看到添加了新集合。
+一个集合对应一个下划线开头的<code class="language-plaintext highlighter-rouge">_collection_label</code>命名的文件夹，
+但只有文件夹而没有在配置中声明时，不被认为是一个集合，
+反过来，有配置声明而没有文件夹时，也会在<code class="language-plaintext highlighter-rouge">site.collections</code>中存在。</p>
+
+<h3 id="集合名使用中文">集合名使用中文</h3>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collection6</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">测试集合6</span>
+</code></pre></div></div>
+<h4 id="label不能使用中文不能使用空格">label不能使用中文、不能使用空格</h4>
+<p>如果集合文件夹用中文命名（配置中当然也写中文集合名），
+能通过<code class="language-plaintext highlighter-rouge">site.collections</code>看到添加了新集合，但新集合的任何信息都读不到。</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 这些都无效</span>
+<span class="na">测试集合3</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">测试集合3'</span>
+<span class="s2">"</span><span class="s">测试集合4"</span><span class="err">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">测试集合4'</span>
+<span class="s1">'</span><span class="s">测试集合5'</span><span class="err">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">测试集合5'</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
+  <span class="c1"># 这些都无效</span>
+  <span class="na">test collection 7</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">测试集合7'</span>
+  <span class="s1">'</span><span class="s">test</span><span class="nv"> </span><span class="s">collection</span><span class="nv"> </span><span class="s">8'</span><span class="err">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">测试集合8'</span>
+</code></pre></div></div>
+
+<hr />
+<p>4
+[][][#&lt;Jekyll::Document _posts/23-6-24-测试贴3.md collection=posts&gt;, #&lt;Jekyll::Document _posts/23-6-25-测试文章.md collection=posts&gt;, #&lt;Jekyll::Document _posts/23-6-27-测试贴2.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweets/1、front matter中声明excerpt/_posts/23-6-30-.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweets/2、在正文中用HTML/_posts/23-6-30-.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweets/3、front matter套模板/_posts/23-6-30-.md collection=posts&gt;][#&lt;Jekyll::Document _test_collection/测试集合页面2.md collection=test_collection&gt;]</p>
+
+<hr />
+
+<p>####</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>output</td>
+      <td>output</td>
+      <td>false</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>files</td>
+      <td>files</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>docs</td>
+      <td>docs</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>relative_directory</td>
+      <td>relative_directory</td>
+      <td>_</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>directory</td>
+      <td>directory</td>
+      <td>/github/workspace/_</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>label</td>
+      <td>label</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td> </td>
+      <td> </td>
+      <td>[]</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>output, files, docs, relative_directory, directory, label</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="labelmustnotcontainspace">labelmustnotcontainspace</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>output</td>
+      <td>output</td>
+      <td>false</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>files</td>
+      <td>files</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>docs</td>
+      <td>docs</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>relative_directory</td>
+      <td>relative_directory</td>
+      <td>_labelmustnotcontainspace</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>directory</td>
+      <td>directory</td>
+      <td>/github/workspace/_labelmustnotcontainspace</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>label</td>
+      <td>label</td>
+      <td>labelmustnotcontainspace</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td> </td>
+      <td> </td>
+      <td>[]</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>output, files, docs, relative_directory, directory, label</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="posts">posts</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>output</td>
+      <td>output</td>
+      <td>true</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>files</td>
+      <td>files</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>docs</td>
+      <td>docs</td>
+      <td>&lt;!DOCTYPE html&gt;&lt;br /&gt;&lt;html lang=”en”&gt;&lt;head&gt;&lt;br /&gt;  &lt;meta charset=”utf-8”&gt;&lt;br /&gt;  &lt;meta http-equiv=”X-UA-Compatible” content=”IE=edge”&gt;&lt;br /&gt;  &lt;meta name=”viewport…（32356）</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>relative_directory</td>
+      <td>relative_directory</td>
+      <td>_posts</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>directory</td>
+      <td>directory</td>
+      <td>/github/workspace/_posts</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>label</td>
+      <td>label</td>
+      <td>posts</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>permalink</td>
+      <td>permalink</td>
+      <td>/:categories/:year/:month/:day/:title:output_ext</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td> </td>
+      <td> </td>
+      <td>[#&lt;Jekyll::Document _posts/23-6-24-测试贴3.md collection=posts&gt;, #&lt;Jekyll::Document _posts/23-6-25-测试文章.md collection=posts&gt;, #&lt;Jekyll::Document _posts/23-6-27-测试贴2.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweets/1、front matter中声明excerpt/_posts/23-6-30-.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweets/2、在正文中用HTML/_posts/23-6-30-.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweets/3、front matter套模板/_posts/23-6-30-.md collection=posts&gt;]</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>output, files, docs, relative_directory, directory, label, permalink</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="test_collection">test_collection</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>output</td>
+      <td>output</td>
+      <td>true</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>files</td>
+      <td>files</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>docs</td>
+      <td>docs</td>
+      <td>&lt;!DOCTYPE html&gt;&lt;br /&gt;&lt;html lang=”en”&gt;&lt;head&gt;&lt;br /&gt;  &lt;meta charset=”utf-8”&gt;&lt;br /&gt;  &lt;meta http-equiv=”X-UA-Compatible” content=”IE=edge”&gt;&lt;br /&gt;  &lt;meta name=”viewport”…（4691）</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>relative_directory</td>
+      <td>relative_directory</td>
+      <td>_test_collection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>directory</td>
+      <td>directory</td>
+      <td>/github/workspace/_test_collection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>label</td>
+      <td>label</td>
+      <td>test_collection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>name</td>
+      <td>name</td>
+      <td>测试集合</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>type</td>
+      <td>type</td>
+      <td>post</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>post</td>
+      <td>post</td>
+      <td>true</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td> </td>
+      <td> </td>
+      <td>[#&lt;Jekyll::Document _test_collection/测试集合页面2.md collection=test_collection&gt;]</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>output, files, docs, relative_directory, directory, label, name, type, post</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><code class="language-plaintext highlighter-rouge">collection[0]</code>会build失败
+outputfalse,</p>
+
+<hr />
+
+<h2>Items from </h2>
+<ul>
+    
+  </ul>
+
+<h2>Items from labelmustnotcontainspace</h2>
+<ul>
+    
+  </ul>
+
+<h2>Items from posts</h2>
+<ul>
+    
+      <li><a href="/4%E3%80%81%E7%94%A8post%E6%A8%A1%E4%BB%BFtweets/3%E3%80%81front%20matter%E5%A5%97%E6%A8%A1%E6%9D%BF/2023/06/30/.html"></a></li>
+    
+      <li><a href="/4%E3%80%81%E7%94%A8post%E6%A8%A1%E4%BB%BFtweets/2%E3%80%81%E5%9C%A8%E6%AD%A3%E6%96%87%E4%B8%AD%E7%94%A8html/2023/06/30/.html"></a></li>
+    
+      <li><a href="/4%E3%80%81%E7%94%A8post%E6%A8%A1%E4%BB%BFtweets/1%E3%80%81front%20matter%E4%B8%AD%E5%A3%B0%E6%98%8Eexcerpt/2023/06/30/.html"></a></li>
+    
+      <li><a href="/2023/06/27/%E6%B5%8B%E8%AF%95%E8%B4%B42.html">测试贴2</a></li>
+    
+      <li><a href="/2023/06/25/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0.html">测试文章</a></li>
+    
+      <li><a href="/2023/06/24/%E6%B5%8B%E8%AF%95%E8%B4%B43.html">测试贴3</a></li>
+    
+  </ul>
+
+<h2>Items from test_collection</h2>
+<ul>
+    
+      <li><a href="/test_collection/%E6%B5%8B%E8%AF%95%E9%9B%86%E5%90%88%E9%A1%B5%E9%9D%A22.html">测试集合页面2</a></li>
+    
+  </ul>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Learn-Jekyll-4/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p>谢谢你！</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

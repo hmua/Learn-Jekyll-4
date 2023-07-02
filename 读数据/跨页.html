@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--fix Jekyll bug: title case error--><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>“Jekyll 4”学习 | 谢谢你！</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="“Jekyll 4”学习" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="谢谢你！" />
+<meta property="og:description" content="谢谢你！" />
+<meta property="og:site_name" content="“Jekyll 4”学习" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="“Jekyll 4”学习" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"谢谢你！","headline":"“Jekyll 4”学习","url":"/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E8%B7%A8%E9%A1%B5.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Learn-Jekyll-4/assets/css/style.css">
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Learn-Jekyll-4/">“Jekyll 4”学习</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Learn-Jekyll-4/Group%20Join.html">Group Join</a><a class="page-link" href="/Learn-Jekyll-4/%E6%8E%A2%E9%92%88">Jekyll版本探针</a><a class="page-link" href="/Learn-Jekyll-4/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/list%E6%A0%BC%E5%BC%8F.html">list格式</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html">list格式</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EConfig.html">从Config</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EInclude.html">从Include</a><a class="page-link" href="/Learn-Jekyll-4/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/%E7%94%A8field.html">用field</a><a class="page-link" href="/Learn-Jekyll-4/%E8%BF%AD%E4%BB%A3.html">迭代</a><a class="page-link" href="/Learn-Jekyll-4/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/%E9%9D%9Elist.html">非list</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E9%9D%9Elist.html">非list</a><a class="page-link" href="/Learn-Jekyll-4/assets/css/style.css">style</a><a class="page-link" href="/Learn-Jekyll-4/assets/minima-social-icons.svg">minima-social-icons</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EData.html">从Data</a><a class="page-link" href="/Learn-Jekyll-4/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E8%B7%A8%E9%A1%B5.html">跨页</a><a class="page-link" href="/Learn-Jekyll-4/%E8%B4%B4.html">贴</a><a class="page-link" href="/Learn-Jekyll-4/%E9%9B%86.html">集</a><a class="page-link" href="/Learn-Jekyll-4/%E9%A1%B5%E9%9B%86.html">页集</a><a class="page-link" href="/Learn-Jekyll-4/">README</a><a class="page-link" href="/Learn-Jekyll-4/assets/css/style.css.map">style</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">{</span><span class="s2">"</span><span class="s">layout"</span><span class="nv">=&gt;"page"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">test_field"</span><span class="nv">=&gt;"foobar"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">tweets"</span><span class="nv">=&gt;</span><span class="pi">[{</span><span class="nv">2022=&gt;</span><span class="pi">[{</span><span class="nv">6=&gt;</span><span class="pi">[{</span><span class="nv">16=&gt;"y22 m6 d16 some content"</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&gt;"y22m6d17 y22m6d17"</span><span class="pi">}]}]},</span> <span class="pi">{</span><span class="nv">2023=&gt;</span><span class="pi">[{</span><span class="nv">6=&gt;</span><span class="pi">[{</span><span class="nv">16=&gt;"some content 1616 16 16"</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&gt;"17171717 some content 2 some content 333"</span><span class="pi">}]}]}],</span> <span class="s2">"</span><span class="s">content"</span><span class="nv">=&gt;"&lt;p&gt;foobar&lt;/p&gt;\n\n&lt;hr /&gt;\n\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}{</span><span class="nv">2023=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”some content 1616 16 16”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”17171717 some content 2 some content 333”</span><span class="pi">}]}]}</span><span class="nv">✓&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}</span><span class="nv">✓&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2023=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”some content 1616 16 16”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”17171717 some content 2 some content 333”</span><span class="pi">}]}]}</span><span class="nv">✓&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×\n×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×\n×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}</span><span class="nv">×（|后面被忽略）\n</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}</span><span class="nv">×（|后面被忽略）&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">dir"</span><span class="nv">=&gt;"/%E8%AF%BB%E6%95%B0%E6%8D%AE/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">excerpt"</span><span class="nv">=&gt;nil</span><span class="pi">,</span> <span class="s2">"</span><span class="s">name"</span><span class="nv">=&gt;"list格式.md"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">path"</span><span class="nv">=&gt;"读数据/list格式.md"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">url"</span><span class="nv">=&gt;"/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html"</span><span class="pi">}</span>
+</code></pre></div></div>
+
+<hr />
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">{</span><span class="s2">"</span><span class="s">layout"</span><span class="nv">=&gt;"page"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">test_field"</span><span class="nv">=&gt;"foobar"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">tweets"</span><span class="nv">=&gt;</span><span class="pi">[{</span><span class="nv">2022=&gt;</span><span class="pi">[{</span><span class="nv">6=&gt;</span><span class="pi">[{</span><span class="nv">16=&gt;"y22 m6 d16 some content"</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&gt;"y22m6d17 y22m6d17"</span><span class="pi">}]}]},</span> <span class="pi">{</span><span class="nv">2023=&gt;</span><span class="pi">[{</span><span class="nv">6=&gt;</span><span class="pi">[{</span><span class="nv">16=&gt;"some content 1616 16 16"</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&gt;"17171717 some content 2 some content 333"</span><span class="pi">}]}]}],</span> <span class="s2">"</span><span class="s">content"</span><span class="nv">=&gt;"&lt;p&gt;foobar&lt;/p&gt;\n\n&lt;hr /&gt;\n\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}{</span><span class="nv">2023=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”some content 1616 16 16”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”17171717 some content 2 some content 333”</span><span class="pi">}]}]}</span><span class="nv">✓&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}</span><span class="nv">✓&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2023=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”some content 1616 16 16”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”17171717 some content 2 some content 333”</span><span class="pi">}]}]}</span><span class="nv">✓&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×\n×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×\n×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}</span><span class="nv">×（|后面被忽略）\n</span><span class="pi">{</span><span class="nv">2022=&amp;gt;</span><span class="pi">[{</span><span class="nv">6=&amp;gt;</span><span class="pi">[{</span><span class="nv">16=&amp;gt;”y22 m6 d16 some content”</span><span class="pi">},</span> <span class="pi">{</span><span class="nv">17=&amp;gt;”y22m6d17 y22m6d17”</span><span class="pi">}]}]}</span><span class="nv">×（|后面被忽略）&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;×&lt;/p&gt;\n"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">dir"</span><span class="nv">=&gt;"/%E8%AF%BB%E6%95%B0%E6%8D%AE/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">excerpt"</span><span class="nv">=&gt;nil</span><span class="pi">,</span> <span class="s2">"</span><span class="s">name"</span><span class="nv">=&gt;"list格式.md"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">path"</span><span class="nv">=&gt;"读数据/list格式.md"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">url"</span><span class="nv">=&gt;"/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html"</span><span class="pi">}</span>
+</code></pre></div></div>
+<p>×<em><code class="language-plaintext highlighter-rouge">join</code>是无效的，搞不懂，
+for是一个handle一条，但join就是整个一条。</em></p>
+
+<hr />
+
+<ul>
+  <li>layoutpage</li>
+  <li>test_fieldfoobar</li>
+  <li>tweets{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}{2023=&gt;[{6=&gt;[{16=&gt;”some content 1616 16 16”}, {17=&gt;”17171717 some content 2 some content 333”}]}]}</li>
+  <li>dir/%E8%AF%BB%E6%95%B0%E6%8D%AE/</li>
+  <li>excerpt</li>
+  <li>namelist格式.md</li>
+  <li>path读数据/list格式.md</li>
+  <li>url/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html</li>
+</ul>
+
+<p>✓</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>page</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>test_field</td>
+      <td>foobar</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>tweets</td>
+      <td>{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}</td>
+      <td>{2023=&gt;[{6=&gt;[{16=&gt;”some content 1616 16 16”}, {17=&gt;”17171717 some content 2 some content 333”}]}]}</td>
+    </tr>
+    <tr>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>excerpt</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>list格式.md</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td>读数据/list格式.md</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>×<em><code class="language-plaintext highlighter-rouge">join</code>对front matter yaml的处理有点问题？</em></p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>test_field</td>
+      <td>foobar</td>
+    </tr>
+    <tr>
+      <td>tweets</td>
+      <td>{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}{2023=&gt;[{6=&gt;[{16=&gt;”some content 1616 16 16”}, {17=&gt;”17171717 some content 2 some content 333”}]}]}</td>
+    </tr>
+    <tr>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>list格式.md</td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td>读数据/list格式.md</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>✓</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>test_field</td>
+      <td>foobar</td>
+    </tr>
+    <tr>
+      <td>tweets</td>
+      <td>{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}{2023=&gt;[{6=&gt;[{16=&gt;”some content 1616 16 16”}, {17=&gt;”17171717 some content 2 some content 333”}]}]}</td>
+    </tr>
+    <tr>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>list格式.md</td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td>读数据/list格式.md</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>✓</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>test_field</td>
+      <td>foobar</td>
+    </tr>
+    <tr>
+      <td>tweets</td>
+      <td>{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}{2023=&gt;[{6=&gt;[{16=&gt;”some content 1616 16 16”}, {17=&gt;”17171717 some content 2 some content 333”}]}]}</td>
+    </tr>
+    <tr>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>list格式.md</td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td>读数据/list格式.md</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>✓</p>
+
+<hr />
+<ol>
+  <li>因为每个page的tags并不相同，所以并不适合对pages用table。</li>
+  <li>本来猜<code class="language-plaintext highlighter-rouge">for a in site.pages</code>，<code class="language-plaintext highlighter-rouge">a[0]</code>是不是应该有name或什么，实际没有，
+就得通过where找</li>
+</ol>
+
+<h4 id="group-joinmd">Group Join.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>tweets</td>
+      <td>{“date”=&gt;2023-06-29 00:00:00 +0000, “t”=&gt;[“通商 通路 流通 干支通路\n背景好时惠及全民 背景坏时搜刮民脂”]}{“date”=&gt;2023-06-26 00:00:00 +0000, “t”=&gt;[“♂利器 锐器 锋 刃 好钢 力气都花在准备这里\n传统技法 水滴”, “从专业转向公共事业\n空间从私人领域转向公共领域\n新开发的庞大空旷的公共…（420）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;p&gt;{“name”=&gt;”2023-06-30 00:00:00 +0000”, “items”=&gt;[#&lt;Jekyll::Document 4、用post模仿tweets/3、front matter套模板/_posts/23-6-30-.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweet…（2721）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>Group Join.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>Group Join.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/Group%20Join.html</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “tweets”=&gt;[{“date”=&gt;2023-06-29 00:00:00 +0000, “t”=&gt;[“通商 通路 流通 干支通路\n背景好时惠及全民 背景坏时搜刮民脂”]}, {“date”=&gt;2023-06-26 00:00:00 +0000, “t”=&gt;[“♂利器 锐器 锋 刃 好钢 力气都花在准备这里\n传统技法 水滴”, “从专业转…（3406）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="jekyll版本探针md">Jekyll版本探针.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>permalink</td>
+      <td>探针</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;h1 id=”jekyll版本探针-测试”&gt;Jekyll版本探针 测试&lt;/h1&gt;&lt;br /&gt;&lt;p&gt;&lt;em&gt;根据&lt;a href=”https://jekyllrb.com/docs/liquid/filters/”&gt;Liquid Filters&lt;/a&gt;制作&lt;/em&gt;&lt;br /&gt;&lt;em&gt;根据&lt;a href=”https:…（1501）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>Jekyll版本探针.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>Jekyll版本探针.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/探针</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “permalink”=&gt;”探针”, “content”=&gt;”&lt;h1 id="jekyll版本探针-测试"&gt;Jekyll版本探针 测试&lt;/h1&gt;\n&lt;p&gt;&lt;em&gt;根据&lt;a href="https://jekyllrb.com/docs/liquid/filters/"&gt;Liquid Filters&lt;/a…（1716）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="3yml格式list格式md">3、YML格式/list格式.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>tweets</td>
+      <td>{“2023-6-29”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”]}{“2023-6-28”=&gt;[“基本像个集合，基本前面的变动是集合中每个成员的定义”, “🌙这些表象 都见过 都熟悉 实际 表象之后在发生着什么？”]}{“2023-6-27”=&gt;[“盲人摸象 有人摸的鼻子 有人摸的耳朵 有人摸的牙 有人摸的屁股 有人摸的尾巴 各保存 描述各的讯息”]}…（304）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;p&gt;{“2023-6-29”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”]}{“2023-6-28”=&gt;[“基本像个集合，基本前面的变动是集合中每个成员的定义”, “🌙这些表象 都见过 都熟悉 实际 表象之后在发生着什么？”]}{“2023-6-27”=&gt;[“盲人摸象 有人摸的鼻子 有人摸的耳朵 有人摸的牙 有人摸的屁股 有人摸的…（6065）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>list格式.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>3、YML格式/list格式.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/list%E6%A0%BC%E5%BC%8F.html</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “tweets”=&gt;[{“2023-6-29”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”]}, {“2023-6-28”=&gt;[“基本像个集合，基本前面的变动是集合中每个成员的定义”, “🌙这些表象 都见过 都熟悉 实际 表象之后在发生着什么？”]}, {“2023-6-27”=&gt;[“盲人摸象 有人摸的鼻子 有人摸的耳…（6890）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="读数据list格式md">读数据/list格式.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>test_field</td>
+      <td>foobar</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>tweets</td>
+      <td>{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}{2023=&gt;[{6=&gt;[{16=&gt;”some content 1616 16 16”}, {17=&gt;”17171717 some content 2 some content 333”}]}]}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>content</td>
+      <td>&lt;p&gt;foobar&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}{2023=&gt;[{6=&gt;[{16=&gt;”some cont…（792）</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>name</td>
+      <td>list格式.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>path</td>
+      <td>读数据/list格式.md</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/list%E6%A0%BC%E5%BC%8F.html</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “test_field”=&gt;”foobar”, “tweets”=&gt;[{2022=&gt;[{6=&gt;[{16=&gt;”y22 m6 d16 some content”}, {17=&gt;”y22m6d17 y22m6d17”}]}]}, {2023=&gt;[{6=&gt;[{16=&gt;”some content 1616 16 16”}, {17=&gt;”17171717 s…（1245）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="读数据从configmd">读数据/从Config.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>&lt;p&gt;1245&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;p&gt;site array 123456&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;p&gt;site array 123&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;p&gt;456&amp;lt…（633）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>从Config.md</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>读数据/从Config.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EConfig.html</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”&lt;p&gt;1245&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;site array 123456&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;site array 123&lt;/p&gt;\n\n&lt;hr /&gt;\n&lt;p&gt;456&lt;/p&gt;\n\n&lt;hr /&gt;\n\n&lt;p&gt;{2022…（863）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="读数据从includemd">读数据/从Include.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;&lt;br…（73）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>从Include.md</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>读数据/从Include.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EInclude.html</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n&lt;hr /&gt;\n\n”, “dir”=&gt;”/%E8%AF%BB%E6%95%B0%E6%8D%AE/”, “…（292）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="3yml格式用fieldmd">3、YML格式/用field.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>tweets</td>
+      <td>{“date”=&gt;”2023-6-29”, “t”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”]}{“date”=&gt;”2023-6-28”, “t”=&gt;[“基本像个集合，基本前面的变动是集合中每个成员的定义”, “🌙这些表象 都见过 都熟悉 实际 表象之后在发生着什么？”]}{“date”=&gt;”2023-6-27”, “t”=&gt;[“盲人摸象 有人摸的鼻子 有…（356）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;p&gt;{“date”=&gt;”2023-6-29”, “t”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”]}{“date”=&gt;”2023-6-28”, “t”=&gt;[“基本像个集合，基本前面的变动是集合中每个成员的定义”, “🌙这些表象 都见过 都熟悉 实际 表象之后在发生着什么？”]}{“date”=&gt;”2023-6-27”…（5360）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>用field.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>3、YML格式/用field.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/%E7%94%A8field.html</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “tweets”=&gt;[{“date”=&gt;”2023-6-29”, “t”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”]}, {“date”=&gt;”2023-6-28”, “t”=&gt;[“基本像个集合，基本前面的变动是集合中每个成员的定义”, “🌙这些表象 都见过 都熟悉 实际 表象之后在发生着什么？”]}, {“date”…（6239）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="迭代md">迭代.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>settings</td>
+      <td>{“title”=&gt;”集，Collections”, “collection”=&gt;”collections”, “sample”=&gt;”posts”, “fields”=&gt;{“name”=&gt;”label”, “selective”=&gt;[“name”, “output”, “docs”, “relative_directory”, “permalink”]}}{“title”=&gt;”贴，Po…（326）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;h2 id=”集collections”&gt;集，Collections&lt;/h2&gt;&lt;br /&gt;&lt;br /&gt;&lt;table&gt;&lt;br /&gt;  &lt;thead&gt;&lt;br /&gt;    &lt;tr&gt;&lt;br /&gt;      &lt;th&gt;label&lt;/th&gt;&lt;br /&gt;      &lt;th&gt;name&lt;/th&gt;&lt;br /&gt;…（4138）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>迭代.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>迭代.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/%E8%BF%AD%E4%BB%A3.html</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “settings”=&gt;[{“title”=&gt;”集，Collections”, “collection”=&gt;”collections”, “sample”=&gt;”posts”, “fields”=&gt;{“name”=&gt;”label”, “selective”=&gt;[“name”, “output”, “docs”, “relative_director…（4836）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="3yml格式非listmd">3、YML格式/非list.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>tweets</td>
+      <td>{“2023-6-29”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”], “2023-6-26”=&gt;[“♂利器 锐器 锋 刃 好钢 力气都花在准备这里 传统技法 水滴”, “从专业转向公共事业 空间从私人领域转向公共领域 新开发的庞大空旷的公共空间 让固守私人领域失去价值 甚至成为累赘”], “2023-6-28”=&gt;[“基本像个集合，基本前面的变动是集合中…（304）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;p&gt;{“name”=&gt;”2023-06-30 00:00:00 +0000”, “items”=&gt;[#&lt;Jekyll::Document 4、用post模仿tweets/3、front matter套模板/_posts/23-6-30-.md collection=posts&gt;, #&lt;Jekyll::Document 4、用post模仿tweet…（5324）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>非list.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>3、YML格式/非list.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/3%E3%80%81YML%E6%A0%BC%E5%BC%8F/%E9%9D%9Elist.html</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “tweets”=&gt;{“2023-6-29”=&gt;[“通商 通路 流通 干支通路 背景好时惠及全民 背景坏时搜刮民脂”], “2023-6-26”=&gt;[“♂利器 锐器 锋 刃 好钢 力气都花在准备这里 传统技法 水滴”, “从专业转向公共事业 空间从私人领域转向公共领域 新开发的庞大空旷的公共空间 让固守私人领域失去价值 甚至成为累赘”], “20…（6108）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="读数据非listmd">读数据/非list.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>tweets</td>
+      <td>{2022=&gt;{6=&gt;{16=&gt;”y22 m6 d16 some content”, 17=&gt;”y22m6d17 y22m6d17”}}, 2023=&gt;{6=&gt;{16=&gt;”some content 1616 16 16”, 17=&gt;”17171717 some content 2 some content 333”}}}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;br /&gt;&lt;p&gt;{2022=&gt;{6=&gt;{16=&gt;”y22 m6 d16 some content”, 17=&gt;”y22m6d17 y22m6d17”}}, 2023=&gt;{6=&gt;{16=&gt;”some content 1616 16 16”, 17=&gt;”17171717 some content 2 some content 3…（547）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>非list.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>读数据/非list.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E9%9D%9Elist.html</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “tweets”=&gt;{2022=&gt;{6=&gt;{16=&gt;”y22 m6 d16 some content”, 17=&gt;”y22m6d17 y22m6d17”}}, 2023=&gt;{6=&gt;{16=&gt;”some content 1616 16 16”, 17=&gt;”17171717 some content 2 some content 333”}}}, “c…（941）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="assetscssstylescss">assets/css/style.scss</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>@charset “UTF-8”;&lt;br /&gt;@import url(“https://voderl.cn/fonts/SmileySans-Oblique/font.css”);&lt;br /&gt;.highlight .c {&lt;br /&gt;  color: #998;&lt;br /&gt;  font-style: italic;&lt;br /&gt;}&lt;br /&gt;.hi…（13924）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/assets/css/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>style.scss</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>assets/css/style.scss</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/assets/css/style.css</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”@charset "UTF-8";\n@import url("https://voderl.cn/fonts/SmileySans-Oblique/font.css");\n.highlight .c {\n  color: #998;\n  font-style: italic;\n}\n.highlight…（14997）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="assetsminima-social-iconsliquid">assets/minima-social-icons.liquid</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>permalink</td>
+      <td>/assets/minima-social-icons.svg</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>&lt;svg xmlns=”http://www.w3.org/2000/svg” xmlns:xlink=”http://www.w3.org/1999/xlink”&gt;&lt;br /&gt;&lt;br /&gt;&lt;symbol id=”rss” fill-rule=”evenodd” clip-rule=”evenodd” stroke-linejoin=”round” stroke…（520）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/assets/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>minima-social-icons.liquid</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>assets/minima-social-icons.liquid</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/assets/minima-social-icons.svg</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “permalink”=&gt;”/assets/minima-social-icons.svg”, “content”=&gt;”&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;\n\n&lt;symbol id="rss"…（784）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="读数据从datamd">读数据/从Data.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>&lt;br /&gt;&lt;p&gt;{2022=&gt;[{6=&gt;[“16 data from included y22 m6 d16 some content”, “17 y22m6d17 y22m6d17”]}]}{2023=&gt;[{6=&gt;[“16 some content 1616 16 16”, “17 17171717 some content 2 some con…（487）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>从Data.md</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>读数据/从Data.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E4%BB%8EData.html</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”\n&lt;p&gt;{2022=&gt;[{6=&gt;[“16 data from included y22 m6 d16 some content”, “17 y22m6d17 y22m6d17”]}]}{2023=&gt;[{6=&gt;[“16 some content 1616 16 16”, “17 17171717…（699）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="读数据跨页md">读数据/跨页.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>{%assign a=site.pages&amp;vert;where:’path’,’读数据/list格式.md’&amp;vert;first%}&lt;br /&gt;<code class="language-plaintext highlighter-rouge">yaml&amp;lt;br /&gt;{{a}}&amp;lt;br /&gt;</code>&lt;br /&gt;&lt;br /&gt;—&lt;br /&gt;<code class="language-plaintext highlighter-rouge">yaml&amp;lt;br /&gt;{{a&amp;vert;join:'、'}}&amp;lt;br /&gt;</code>&lt;br…（1205）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>跨页.md</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>读数据/跨页.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/%E8%AF%BB%E6%95%B0%E6%8D%AE/%E8%B7%A8%E9%A1%B5.html</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”{%assign a=site.pages&amp;vert;where:’path’,’读数据/list格式.md’&amp;vert;first%}\n<code class="language-plaintext highlighter-rouge">yaml\n{{a}}\n</code>\n\n—\n<code class="language-plaintext highlighter-rouge">yaml\n{{a&amp;vert;join:'、'}}\n</code>\n×*<code class="language-plaintext highlighter-rouge">join</code>是无效的，搞不懂，\nfor是一个hand…（1455）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="贴md">贴.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>{{site.posts&amp;vert;size}}✓&lt;br /&gt;{{site.posts&amp;vert;map:’path’&amp;vert;join:’、’}}✓&lt;br /&gt;&lt;br /&gt;—&lt;br /&gt;{{site.pages.t3}}×&lt;br /&gt;{{site.pages[t3]}}×&lt;br /&gt;{{site.pages[‘t3.md’]}}×&lt;br…（350）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>贴.md</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>贴.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/%E8%B4%B4.html</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”{{site.posts&amp;vert;size}}✓\n{{site.posts&amp;vert;map:’path’&amp;vert;join:’、’}}✓\n\n—\n{{site.pages.t3}}×\n{{site.pages[t3]}}×\n{{site.pages[‘t3.md’]}}×\n{{site.pages["…（500）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="集md">集.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>在<code class="language-plaintext highlighter-rouge">_config.yml</code>中添加集合，就能通过<code class="language-plaintext highlighter-rouge">site.collections</code>看到添加了新集合。&lt;br /&gt;一个集合对应一个下划线开头的<code class="language-plaintext highlighter-rouge">_collection_label</code>命名的文件夹，&lt;br /&gt;但只有文件夹而没有在配置中声明时，不被认为是一个集合，&lt;br /&gt;反过来，有配置声明而没有文件夹时，也会在<code class="language-plaintext highlighter-rouge">site.collections</code>中存在。&lt;br…（1354）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>集.md</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>集.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/%E9%9B%86.html</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”在<code class="language-plaintext highlighter-rouge">_config.yml</code>中添加集合，就能通过<code class="language-plaintext highlighter-rouge">site.collections</code>看到添加了新集合。\n一个集合对应一个下划线开头的<code class="language-plaintext highlighter-rouge">_collection_label</code>命名的文件夹，\n但只有文件夹而没有在配置中声明时，不被认为是一个集合，\n反过来，有配置声明而没有文件夹时，也会在<code class="language-plaintext highlighter-rouge">site.collections</code>…（1543）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="页集md">页集.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>{{site.pages&amp;vert;size}}✓&lt;br /&gt;{{site.pages&amp;vert;map:’path’&amp;vert;join:’、’}}✓&lt;br /&gt;&lt;br /&gt;—&lt;br /&gt;{{site.pages.t3}}×&lt;br /&gt;{{site.pages[t3]}}×&lt;br /&gt;{{site.pages[‘t3.md’]}}×&lt;br…（350）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>页集.md</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>页集.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/%E9%A1%B5%E9%9B%86.html</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”{{site.pages&amp;vert;size}}✓\n{{site.pages&amp;vert;map:’path’&amp;vert;join:’、’}}✓\n\n—\n{{site.pages.t3}}×\n{{site.pages[t3]}}×\n{{site.pages[‘t3.md’]}}×\n{{site.pages["…（511）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="readmemd">README.md</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>home</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>permalink</td>
+      <td>//</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>content</td>
+      <td>readme123&lt;br /&gt;</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dir</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>name</td>
+      <td>README.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>path</td>
+      <td>README.md</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>url</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> </td>
+      <td>{“layout”=&gt;”home”, “permalink”=&gt;”//”, “content”=&gt;”readme123\n”, “dir”=&gt;”/”, “excerpt”=&gt;nil, “name”=&gt;”README.md”, “path”=&gt;”README.md”, “url”=&gt;”/”}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="assetscssstylecssmap">assets/css/style.css.map</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>layout</td>
+      <td>page</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>content</td>
+      <td>{“version”:3,”sourceRoot”:””,”sources”:[”../../../../tmp/jekyll-remote-theme-20230702-1118-1uia0jh/<em>sass/minima/custom-styles.scss”,”../../../../tmp/jekyll-remote-theme-20230702-1118-1uia0jh/</em>…（33712）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>dir</td>
+      <td>/assets/css/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>excerpt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>name</td>
+      <td>style.css.map</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>path</td>
+      <td>assets/css/style.css.map</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>url</td>
+      <td>/assets/css/style.css.map</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> </td>
+      <td>{“layout”=&gt;”page”, “content”=&gt;”{"version":3,"sourceRoot":"","sources":["../../../../tmp/jekyll-remote-theme-20230702-1118-1uia0jh/_sass/minima/custom-styles.scss","../../../../tmp/j…（35194）</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Learn-Jekyll-4/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p>谢谢你！</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
